@@ -1,0 +1,8 @@
+{
+  "host": "0.0.0.0",
+  "port": 8000,
+  "headless": false,
+  "scroll_delay": 2,
+  "max_consecutive_scrolls": 40,
+  "implicit_wait": 5
+}

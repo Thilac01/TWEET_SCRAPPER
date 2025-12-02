@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TWScrape — Dashboard</title>
+<link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="brand">TWScrape<span class="tiny"> — Cookie login & live scraping</span></div>
+  <div class="actions">
+    <button id="btn-download-csv">Download CSV</button>
+    <button id="btn-download-json">Download JSON</button>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="panel controls">
+    <h3>Controls</h3>
+    <label>Keyword
+      <input id="keyword" placeholder="e.g. python, aeronautics">
+    </label>
+    <label>Max tweets
+      <input id="max_tweets" type="number" value="50">
+    </label>
+    <label>Cookies (optional paste JSON)
+      <textarea id="cookies" placeholder='Paste cookies JSON array to override config/cookies.json (optional)'></textarea>
+    </label>
+    <div class="btn-row">
+      <button id="btn-start">Start Scrape</button>
+      <button id="btn-stop">Stop</button>
+    </div>
+    <div class="status" id="status">Idle</div>
+  </div>
+
+  <div class="panel logs">
+    <h3>Terminal Logs</h3>
+    <div id="terminal" class="terminal"></div>
+  </div>
+
+  <div class="panel tweets">
+    <h3>Live Tweets (<span id="tweet-count">0</span>)</h3>
+    <table id="tweet-table">
+      <thead><tr><th>#</th><th>User</th><th>Handle</th><th>Text</th><th>Time</th><th>URL</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
+
+<script src="/static/dashboard.js"></script>
+</body>
+</html>
